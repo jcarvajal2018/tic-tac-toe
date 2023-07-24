@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import confetti from 'canvas-confetti'
 import { Square } from './components/Square'
 import { TURNS } from './constants'
@@ -54,6 +54,10 @@ function App() {
         setWinner(false)
     }
   }
+
+  useEffect(()=> {
+    console.log('useEffect')
+  },[winner,turn])
 
 
   return (
